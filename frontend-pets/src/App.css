@@ -1,0 +1,262 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+
+
+
+
+
+/* App.css */
+
+/* --- NAVBAR --- */
+.navbar-custom {
+  /* Gradiente que se funde hacia abajo */
+  background: linear-gradient(to bottom, rgba(10, 25, 47, 0.95) 0%, rgba(10, 25, 47, 0.6) 50%, rgba(10, 25, 47, 0) 100%);
+  padding: 1.5rem 4rem 4rem 4rem; /* Más padding abajo para el desvanecido */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ocupa el ancho de la ventana */
+  z-index: 1000;
+  box-sizing: border-box; /* EVITA QUE LOS BOTONES SE VAYAN DETRÁS DEL SCROLL */
+}
+
+.nav-logo {
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links-container {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.simulador-wrapper {
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.simulador-label {
+  color: #94a3b8;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.simulador-select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #1e293b;
+  color: #ffcc00;
+  font-size: 0.8rem;
+  cursor: pointer;
+  outline: none;
+}
+
+/* --- SECCIÓN INICIO --- */
+.hero-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero-content {
+  display: grid;
+
+  max-width: 1200px;
+
+  padding: 0 60px;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 5.2rem;
+  margin: 0;
+  line-height: 0.95;
+  font-weight: 900;
+  color: white;
+  text-shadow: 4px 4px 15px rgba(0,0,0,0.8), 0 0 5px rgba(0,0,0,1);
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 30px 0;
+  max-width: 480px;
+  color: #ffffff; /* Blanco puro */
+  font-weight: 600; /* Un poco más de grosor para que no se pierda */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.2); /* Fondo sutil oscuro detrás del párrafo */
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #ffcc00;
+  color: #0f172a;
+  padding: 16px 38px;
+  border-radius: 6px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.btn-secondary {
+  border: 2.5px solid white;
+  color: white;
+  padding: 14px 38px;
+  border-radius: 6px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  background-color: rgba(15, 23, 42, 0.6); /* Le damos un fondo oscuro semitransparente */
+  border: 2px solid #ffffff;
+  backdrop-filter: blur(4px); /* Efecto cristal para que resalte */
+  transition: background-color 0.3s;
+}
+
+.btn-login-inicio {
+  color: #ffcc00;
+  padding: 14px 38px;
+  border-radius: 6px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid #ffcc00;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.3s;
+}
+
+.btn-login-inicio:hover {
+  background-color: #ffcc00;
+  color: #0f172a;
+}
+
+.hero-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.hero-main-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-divider {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.login-card {
+  position: relative;
+  padding-top: 60px !important;
+}
+
+.btn-back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.btn-back:hover {
+  color: #054f7d;
+}
+
+.btn-logout {
+  background: rgba(255, 68, 68, 0.15);
+  border: 1px solid #ff4444;
+  color: #ff4444;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-logout:hover {
+  background: #ff4444;
+  color: white;
+  transform: scale(1.05);
+}
