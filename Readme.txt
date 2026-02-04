@@ -76,3 +76,43 @@ DB_NAME=nombre_de_tu_base_de_datos
 # Cambia esta clave por una frase larga y secreta en producción
 JWT_SECRET=tu_clave_secreta_super_segura_123
 JWT_EXPIRES_IN=1h
+
+
+🚀 Cómo ejecutar el proyecto (Backend)
+Sigue estos pasos para configurar la base de datos y levantar el servidor:
+
+1. Configuración de Variables de Entorno
+Crea un archivo .env en la carpeta backend-pets y configura tus credenciales de PostgreSQL:
+
+Fragmento de código
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_contraseña
+DB_NAME=nombre_de_tu_db
+JWT_SECRET=una_clave_secreta_segura
+2. Instalación de Dependencias
+Abre una terminal en la carpeta del backend y ejecuta:
+
+Bash
+npm install
+3. Ejecución de Migraciones
+Para crear las tablas automáticamente en tu base de datos local, utiliza el sistema de migraciones de TypeORM:
+
+Bash
+# Ejecuta todas las migraciones pendientes
+npm run migration:run
+Nota: Esto creará las tablas usuarios, mascotas y pedidos con todas sus relaciones y restricciones sin necesidad de scripts SQL manuales.
+
+4. Iniciar el Servidor
+Una vez que la base de datos esté lista, levanta la aplicación:
+
+Bash
+# Modo desarrollo con auto-recarga
+npm run start:dev
+🛠️ Comandos Útiles de Migraciones
+Si necesitas realizar cambios en el modelo de datos en el futuro, usa estos comandos:
+
+Generar nueva migración: npm run migration:generate -- src/migrations/NombreDelCambio (detecta cambios en tus entidades y crea el SQL).
+
+Deshacer última migración: npm run migration:revert (útil si cometiste un error en el último cambio).
